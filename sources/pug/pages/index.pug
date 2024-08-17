@@ -1,0 +1,174 @@
+extends ../_skeleton
+
+include ../components/posts
+
+block page
+	include ../sections/_header-classic
+
+	//Intro
+	section.section.section-lg.section-intro
+		.container
+			.row.justify-content-center
+				.col-xl-8.text-center
+					h1.font-weight-bold.text-primary.wow.fadeInUp(data-wow-delay=".1s") Loving God, loving others and serving the world
+					p.wow.fadeInUp(data-wow-delay=".2s").text-sm Welcome to Rise church, your #1 place to praise the Lord.
+
+
+	//Welcome
+	section.section.section-lg.bg-default
+		.container
+			.row.justify-content-center
+				.col-xl-8.col-lg-10
+					.pre-title.wow.fadeInLeft(data-wow-delay=".1s") Welcome to Rise Church
+					h2.wow.fadeInRight(data-wow-delay=".2s") Sharing the God’s love with everyone
+					p.text-sm.wow.fadeInUp(data-wow-delay=".3s") Our mission is helping people find their way back to God. We accomplish this by reaching people far from God, restoring God’s dream for the world, and reproducing this mission in others. There are three key relationships that help you develop a growing relationship with Jesus.
+					a(href="about-us.html" data-wow-delay=".3s").shadow.btn.btn-icon.btn-icon-right.btn-secondary.btn-svg.offset-xl-55.wow.fadeInUp
+						span.svg-icon
+							svg(xmlns='http://www.w3.org/2000/svg' width='18' height='10' viewbox='0 0 18 10' fill='#fff')
+								path(d='M13 10V6H0V4H13V0L18 5L13 10Z' fill='')
+						span More about us
+
+	//Posts
+	section.section.section-lg.bg-default
+		.container.container-custom
+			.row.row-narrow-66.row-40
+				.col-md-6.col-lg-4.wow.fadeInUp(data-wow-delay=".1s")
+					+post-classic({
+						img: 'thumbnail-1-530x370',
+						info: 'Rise Church, January 23, 2020 ',
+						title: 'The Struggle with Fellowship in Student Ministry',
+						link: 'single-event.html'
+					})
+				.col-md-6.col-lg-4.wow.fadeInUp(data-wow-delay=".2s")
+					+post-classic({
+						img: 'thumbnail-2-530x370',
+						info: 'Rise Church,  January 23, 2020 ',
+						title: 'Why Dissappointment With Your Pastor Could Be a Good Thing\n',
+						link: 'single-event.html'
+					})
+				.col-md-6.col-lg-4.wow.fadeInUp(data-wow-delay=".3s")
+					+post-classic({
+						img: 'thumbnail-3-530x370',
+						info: 'Rise Church,  January 23, 2020 ',
+						title: 'Everyday Evangelism: The Importance of Faithful Laymen\n',
+						link: 'single-event.html'
+					})
+
+
+
+
+
+	//Welcome
+	section.section.section-lg.bg-default
+		.container
+			.row.row-30.align-items-center
+				.col-lg-6.p-xl-0.wow.fadeInLeft
+					+img('home-1-660x495')
+				.col-lg-6.inset-left-110
+					.pre-title.wow.fadeInRight(data-wow-delay=".1s") Our Community
+					h2.wow.fadeInRight(data-wow-delay=".2s") Sharing the God’s love with everyone
+					p.wow.fadeInRight(data-wow-delay=".3s") We experience biblical community through small groups. We contribute our time, talents, and resources to further the Mission of Jesus in our communities and the world.
+					a(href="#" data-wow-delay=".3s").shadow.btn.btn-icon.btn-icon-right.btn-primary.btn-svg.offset-xl-50.wow.fadeInUp
+						span.svg-icon
+							svg(xmlns='http://www.w3.org/2000/svg' width='18' height='10' viewbox='0 0 18 10' fill='#fff')
+								path(d='M13 10V6H0V4H13V0L18 5L13 10Z' fill='')
+						span Read more
+
+
+	//Donation
+	section.section.section-lg.bg-default
+		.container
+			.row.row-30.align-items-center.flex-column-reverse.flex-lg-row
+				.col-lg-6.inset-right-110
+					.pre-title.wow.fadeInLeft(data-wow-delay=".1s") your Donation matters
+					h2.wow.fadeInLeft(data-wow-delay=".2s") Make a donation
+					p.wow.fadeInLeft(data-wow-delay=".3s") Giving is a biblical principle that when lived by, produces a rich harvest in our lives. Consider donating today and join the wonderful community of our church supporters. Your giving is making a difference in this church, our community, and the world.
+					a(href="#" data-wow-delay=".3s").shadow.btn.btn-secondary.offset-xl-50.wow.fadeInUp Donate now
+				.col-lg-6.p-xl-0.wow.fadeInRight
+					+img('home-2-660x495')
+	//Swiper
+	section.section.section-lg.bg-primary
+		.container
+			.row.justify-content-center
+				.col-lg-12
+					.swiper-container.swiper-slider.swiper-style-1( data-swiper!={
+						autoplay: {delay: 4567},
+						effect: 'fade'
+					})
+						.swiper-wrapper
+							.swiper-slide.context-dark
+								.swiper-slide-caption.text-center.text-lg-left
+									.row.justify-content-center: .col-xl-10.p-xl-0
+										.row.justify-content-center.row-20.align-items-center.flex-column.flex-md-row
+											.col-lg-3.p-xl-0
+												+img('home-3-280x349')
+											.col-lg-9.inset-left-110
+												.h3
+													| “I've never been part of a church that's just getting started, so this is all new territory for me.
+													span.text-italic.accent-block It's incredible to see God at work &
+													| bringing people together.”
+												.author Evan Smith
+												.author-position Parishioner
+
+
+							.swiper-slide.context-dark
+								.swiper-slide-caption.text-center.text-lg-left
+									.row.justify-content-center: .col-xl-10.p-xl-0
+										.row.justify-content-center.align-items-center.flex-column.flex-md-row.row-20
+											.col-lg-3.p-xl-0
+												+img('home-4-280x349')
+											.col-lg-9.inset-left-110
+												.h3
+													| “For me, Rise is an oasis where I can be refreshed with living water. Every Sunday
+													span.text-italic.accent-block I come with expectation
+													| of what message I will receive from our Lord.”
+												.author Brandon Peterson
+												.author-position Parishioner
+
+
+						//Swiper Pagination
+						.swiper-pagination
+
+						//Swiper Navigation
+						.swiper-button-prev
+							svg(xmlns='http://www.w3.org/2000/svg' width='18' height='10' viewbox='0 0 18 10' fill='')
+								path(d='M5 10V6H18V4H5V0L0 5L5 10Z' fill='')
+
+						.swiper-button-next
+							svg(xmlns='http://www.w3.org/2000/svg' width='18' height='10' viewbox='0 0 18 10' fill='')
+								path(d='M5 10V6H18V4H5V0L0 5L5 10Z' fill='')
+
+
+
+
+	//Locations
+	section.section.section-lg.bg-default
+		.container
+			.pre-title.text-center.wow.fadeInUp(data-wow-delay=".1s") Where to find us
+			h2.wow.fadeInUp(data-wow-delay=".2s").text-center Our Churches
+			.row.row-narrow-50.row-40.row-xl
+				.col-lg-6.wow.fadeInUp(data-wow-delay=".3s")
+					.thumbnail-classic
+						a(href="#").thumbnail-classic__media
+								+img('home-3-610x458')
+						h3: a(href="#") Rise in New York
+						a.location(href="#")
+							span.icon.mdi-map-marker.mdi
+							| 178 West 27th Street New York, NY 10012
+				.col-lg-6.wow.fadeInUp(data-wow-delay=".3s")
+					.thumbnail-classic
+						a(href="#").thumbnail-classic__media
+							+img('home-4-610x458')
+						h3: a(href="#") Rise in Florida
+						a.location(href="#")
+							span.icon.mdi-map-marker.mdi
+							| 38 Depot Court Port Orange, FL 32127
+
+
+
+	section.section.section-vide.section-lg.video-wrap.vide(data-vide-bg="video/video-1")
+		.container.text-center.context-dark
+			.h1 Attend the next church Service
+			p.text-sm See you at the sunday sermon
+
+	include ../sections/_footer-classic

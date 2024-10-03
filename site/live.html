@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chruch Live</title>
+    <style>
+.youtube-live-embed {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 aspect ratio */
+  height: 0;
+  overflow: hidden;
+  max-width: 100%;
+  background: #fffdfd;
+}
+
+.youtube-live-embed iframe {
+  position: absolute;
+  top: 20%;
+  left: 30%;
+  width: 50%;
+  height: 50%;
+  border: #000 solid 10px;
+  border-radius: 10px;
+  overflow: hidden;
+  background: #000;
+}
+    </style>
+</head>
+<body>
+    <!--
+    <div class="youtube-live-embed">
+    <iframe width="800" height="450" src="https://www.youtube.com/embed/bmYEcuQgU9Y?si=n_bSlE3FfPCY434i" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+   -->
+    <div id="live-status">
+        Checking live status...
+      </div>
+    <script>
+    const apiKey = ''; // Replace with your YouTube API key
+    const channelId = ''; // Replace with your YouTube Channel ID
+
+    function checkLiveStatus() {
+      fetch(`https://www.googleapis.com/youtube/v3/search?part=snippet&channelId=${channelId}&eventType=live&type=video&key=${apiKey}`)
+        .then(response => response.json())
+        .then(data => {
+          const liveStatusDiv = document.getElementById('live-status');
+          if (data.items && data.items.length > 0) {
+            const liveVideoId = data.items[0].id.videoId;
+            console.log('Live video ID:', liveVideoId);
+            liveStatusDiv.innerHTML = `
+              <p>We are <strong>LIVE</strong> now! Watch the stream below:</p>
+              <iframe width="560" height="315" src="https://www.youtube.com/embed/${liveVideoId}" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+            `;
+          } else {
+            liveStatusDiv.innerHTML = '<p>We are currently <strong>offline</strong>. Check back later for our next live stream!</p>';
+          }
+        })
+        .catch(error => {
+          console.error('Error fetching live status:', error);
+        });
+    }
+
+    // Run the function to check live status
+    checkLiveStatus();
+    </script>
+</body>
+</html>

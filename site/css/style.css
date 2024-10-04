@@ -393,13 +393,39 @@ h2 + p.text-sm,
 }
 
 .text-primary {
-	color: #0000FF
-	!important;
+	color: #A28951	!important;
 	text-shadow: 
         -1px -1px 0 #000,  
         1px -1px 0 #000,
         -1px 1px 0 #000,
         1px 1px 0 #000;
+}
+.text-primaryabout {
+	color: #A28951	!important;
+	text-shadow: 
+        -1px -1px 0 #000,  
+        1px -1px 0 #000,
+        -1px 1px 0 #000,
+        1px 1px 0 #000;
+		position: relative;
+		top: 0%;
+		left: 35%;
+
+}
+
+.text-secondary2 {
+	color: #A28951	!important;
+	text-shadow: 
+		-1px -1px 0 #000,  
+		1px -1px 0 #000,
+		-1px 1px 0 #000,
+		1px 1px 0 #000;
+	font-family: inherit;
+	font-weight: 500;
+	font-size: 80px;
+	position: relative;
+	top: -10%;
+	left: 40%;	
 }
 
 .text-sm {
@@ -1470,6 +1496,8 @@ html [class*='section-'].section-bottom-0 {
 	background-size: cover;
 	background-position: center;
 	background-repeat: no-repeat;
+	min-height: 39.47917vw;
+
 }
 
 @media (min-width: 992px) {
@@ -3357,7 +3385,7 @@ hr {
 }
 
 .gallery-thumbnail .float-title {
-	color: #ffffff;
+	color: #A28951;
 	font-weight: 600;
 	font-family: "Ibarra Real Nova", serif;
 	line-height: 1.1;
@@ -3369,6 +3397,12 @@ hr {
 	right: 15px;
 	display: block;
 	font-size: 28px;
+	text-shadow: 
+        -1px -1px 0 #0a0808,  
+        1px -1px 0 #070707,
+        -1px 1px 0 #000000,
+        1px 1px 0 #050505;
+
 }
 
 @media (min-width: 992px) {

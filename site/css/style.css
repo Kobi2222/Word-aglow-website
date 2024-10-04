@@ -737,7 +737,7 @@ html [class*='section-'].section-bottom-0 {
 .section-intro {
 	background: url("../images/bg-img-1.jpg") no-repeat;
 	background-size: cover;
-	min-height: 49.47917vw;
+	min-height: 39.47917vw;
 	position: relative;
 }
 
@@ -2288,6 +2288,9 @@ p + .list-marked {
 
 * + .list-ordered {
 	margin-top: 15px;
+}
+.icon-red {
+	color: red !important;
 }
 
 .social-list {

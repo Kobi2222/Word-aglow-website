@@ -1,0 +1,41 @@
+.youtube-live-embed {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+    background: #fffdfd;
+  }
+  .youtube-live-embed h1 {
+    position: absolute;
+    top: 10%;
+    left: 40%;
+    color: #000;
+  }
+  .youtube-live-embed iframe {
+    position: absolute;
+    top: 20%;
+    left: 25%;
+    width: 50%;
+    height: 50%;
+    border: #000 solid 10px;
+    border-radius: 10px;
+    overflow: hidden;
+    background: #000;
+  }
+  .icon-red {
+       color: red !important;
+}
+.live-text {
+  color: red;
+  font-weight: bold;
+  font-size: 12px;
+  margin-left: 5px; /* Space between icon and text */
+  animation: blink 1s step-start infinite;
+
+}  
+@keyframes blink {
+    50% {
+        opacity: 0;
+    }
+}

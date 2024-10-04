@@ -12,29 +12,10 @@
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/fonts.css">
     <link rel="stylesheet" href="css/style.css">
-    <style>
-          .ie-panel{display: none;background: #212121;padding: 10px 0;box-shadow: 3px 3px 5px 0 rgba(0,0,0,.3);clear: both;text-align:center;position: relative;z-index: 1;} html.ie-10 .ie-panel, html.lt-ie-10 .ie-panel {display: block;}
-          .youtube-live-embed {
-            position: relative;
-            padding-bottom: 56.25%; /* 16:9 aspect ratio */
-            height: 0;
-            overflow: hidden;
-            max-width: 100%;
-            background: #fffdfd;
-          }
+    <link rel="stylesheet" href="css/live.css">
 
-          .youtube-live-embed iframe {
-            position: absolute;
-            top: 20%;
-            left: 30%;
-            width: 50%;
-            height: 50%;
-            border: #000 solid 10px;
-            border-radius: 10px;
-            overflow: hidden;
-            background: #000;
-          }
-    </style>
+    <style>
+          .ie-panel{display: none;background: #212121;padding: 10px 0;box-shadow: 3px 3px 5px 0 rgba(0,0,0,.3);clear: both;text-align:center;position: relative;z-index: 1;} html.ie-10 .ie-panel, html.lt-ie-10 .ie-panel {display: block;}    </style>
 </head>
 <body>
   <div class="ie-panel"><a href="http://windows.microsoft.com/en-US/internet-explorer/"><img src="images/ie8-panel/warning_bar_0000_us.jpg" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today."></a></div>
@@ -70,9 +51,9 @@
                 </li>
               </ul>
               <ul class="social-list">
+                <li><a href="live.html"><span class="icon fa fa-rss"></span></a></li>
                 <li><a href="https://www.youtube.com/@rccgwordaglowparish"><span class="icon fa fa-youtube-play"></span></a></li>                  
                 <li><a href="https://www.facebook.com/rccgwordaglowparish?mibextid=LQQJ4d"><span class="icon fa fa-facebook-f"></span></a></li>
-
                 <li><a href="https://www.instagram.com/rccgwordaglowparish?igsh=MXdkZ3V6ZXpqZHhyZA==" target="_blank"><span class="icon fa fa-instagram"></span></a></li>
 
               
@@ -124,6 +105,7 @@
 
 
     <div class="youtube-live-embed">
+      <h1>Live Stream</h1>
     <iframe width="800" height="450" src="https://www.youtube.com/embed/bmYEcuQgU9Y?si=n_bSlE3FfPCY434i" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
     </div>
     <!---
@@ -216,52 +198,9 @@
     
     
     
-    <script>
-          const apiKey = ''; // Replace with your YouTube API key
-          const channelId = ''; // Replace with your YouTube Channel ID
-
-          /**
-           * Checks the live status of a YouTube channel and updates the page
-           * accordingly.
-           *
-           * Fetches the YouTube API's search endpoint with the following parameters:
-           *   - part: snippet
-           *   - channelId: the ID of the YouTube channel to check
-           *   - eventType: live
-           *   - type: video
-           *   - key: your YouTube API key
-           *
-           * If a live video is found, updates the page with a message and an iframe
-           * containing the live stream. Otherwise, updates the page with an offline
-           * message.
-           *
-           * @private
-           */
-
-          function checkLiveStatus() {
-            fetch(`https://www.googleapis.com/youtube/v3/search?part=snippet&channelId=${channelId}&eventType=live&type=video&key=${apiKey}`)
-              .then(response => response.json())
-              .then(data => {
-                const liveStatusDiv = document.getElementById('live-status');
-                if (data.items && data.items.length > 0) {
-                  const liveVideoId = data.items[0].id.videoId;
-                  console.log('Live video ID:', liveVideoId);
-                  liveStatusDiv.innerHTML = `
-                    <p>We are <strong>LIVE</strong> now! Watch the stream below:</p>
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/${liveVideoId}" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-                  `;
-                } else {
-                  liveStatusDiv.innerHTML = '<p>We are currently <strong>offline</strong>. Check back later for our next live stream!</p>';
-                }
-              })
-              .catch(error => {
-                console.error('Error fetching live status:', error);
-              });
-          }
-
-          // Run the function to check live status
-          checkLiveStatus();
-    </script>
+    <script src="js/live.js"></script>
+         
+ 
      <script src="js/core.min.js"></script>
      <script src="js/script.js"></script>
 </body>

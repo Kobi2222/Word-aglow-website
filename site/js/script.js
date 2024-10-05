@@ -28,7 +28,7 @@
 			lightGallery:            $('[data-lightgallery="group"]'),
 			lightGalleryItem:        $('[data-lightgallery="item"]'),
 			lightDynamicGalleryItem: $('[data-lightgallery="dynamic"]'),
-			materialParallax:        $('.parallax-container'),
+			materialParallax:        $('.parallax-container'), 
 			owl:                     $('.owl-carousel'),
 			popover:                 $('[data-toggle="popover"]'),
 			preloader:               $('.preloader'),
@@ -879,3 +879,4 @@
 	});
 }());
 
+//fumnanya code

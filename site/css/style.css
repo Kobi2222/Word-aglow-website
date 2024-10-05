@@ -3404,6 +3404,16 @@ hr {
         1px 1px 0 #050505;
 
 }
+.gallery-thumbnail img {
+    filter: none; /* Removes any dark filter applied */
+    opacity: 1; /* Ensures the image is fully visible */
+}
+
+.gallery-thumbnail:hover img {
+    filter: brightness(1); /* Prevent darkening on hover */
+    opacity: 1; /* Keep full opacity on hover */
+}
+
 
 @media (min-width: 992px) {
 	.gallery-thumbnail .float-title {

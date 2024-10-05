@@ -184,7 +184,7 @@
           </div>
         </div>
       </section>
-      
+        
       <!--Swiper-->
       <section class="section section-lg bg-primary">
         <div class="container">
@@ -272,7 +272,7 @@
                 <div class="pre-title wow fadeInLeft" data-wow-delay=".1s">your Donation matters</div>
                 <h2 class="wow fadeInLeft" data-wow-delay=".2s">Make a donation</h2>
                 <p class="wow fadeInLeft" data-wow-delay=".3s">Giving is a biblical principle that when lived by, produces a rich harvest in our lives. Consider donating today and join the wonderful community of our church supporters. Your giving is making a difference in this church, our community, and the world.</p>
-                <a class="shadow btn btn-secondary offset-xl-50 wow fadeInUp" href="#" data-wow-delay=".3s">Donate now</a>
+                <a class="shadow btn btn-secondary offset-xl-50 wow fadeInUp" href="#" id="donateButton" data-wow-delay=".3s">Donate now</a>
               </div>
               <div class="col-lg-6 p-xl-0 wow fadeInRight"><img src="images/home-2-660x495.jpg" alt="" width="660" height="495"/>
               </div>
@@ -280,6 +280,16 @@
           </div>
         </section>
       </section>
+      <!-- Modal Structure -->
+      <div id="interacModal" class="modal">
+        <div class="modal-content">
+          <h4>Interac Donation</h4>
+          <p>Please send your Interac donation to the following email:</p>
+          <p><strong>donations@yourchurch.com</strong></p>
+          <p>Thank you for your generous support!</p>
+          <button id="closeModal" class="btn btn-primary">Close</button>
+        </div>
+      </div>
       <section class="section section-vide section-lg video-wrap vide" data-vide-bg="video/video-1">
         <div class="container text-center context-dark">
           <div class="h1" style="color: darkcyan;">See you on sunday</div>
@@ -311,7 +321,7 @@
                     
                       <li><a href="#">Blog</a></li>
                       <li><a href="#">Gallery</a></li>
-                      <li><a href="#">Donate Now</a></li>
+                      <li><a href="#" id="donateButton2">Donate Now</a></li>
                     </ul>
                   </div>
                   <div class="col-sm-4 col-6 wow fadeInUp" data-wow-delay=".3s">

@@ -880,3 +880,26 @@
 }());
 
 //fumnanya code
+// Get the modal and button elements
+var modal = document.getElementById("interacModal");
+var btn = document.getElementById("donateButton");
+var btn2 = document.getElementById("donateButton2");
+var closeBtn = document.getElementById("closeModal");
+
+// When the user clicks the button, open the modal
+btn.onclick =btn2.onclick = function(event) {
+  event.preventDefault(); // Prevent default link behavior
+  modal.style.display = "block"; // Show the modal
+}
+
+// When the user clicks on close, close the modal
+closeBtn.onclick = function() {
+  modal.style.display = "none"; // Hide the modal
+}
+
+// When the user clicks anywhere outside the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+	modal.style.display = "none";
+  }
+}

@@ -1,17 +1,26 @@
 <!DOCTYPE html>
-<html lang="en">
+<html class="wide wow-animation" lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Request a Ride</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Roboto:400,500%7CIbarra+Real+Nova:400,600,600i,700">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/fonts.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/live.css">
+    
     <style>
-        body, h1, p, form {
+        .ie-panel{display: none;background: #212121;padding: 10px 0;box-shadow: 3px 3px 5px 0 rgba(0,0,0,.3);clear: both;text-align:center;position: relative;z-index: 1;} html.ie-10 .ie-panel, html.lt-ie-10 .ie-panel {display: block;}
+        .form-container body, h1, p, form {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
 
-        body {
+         .form-container {
             font-family: Arial, sans-serif;
             background-color: #f9f9f9;
             display: flex;
@@ -20,31 +29,36 @@
             height: 100vh;
         }
 
-        form {
+        .form-container form {
             background: #ffffff;
             padding: 20px;
             border-radius: 8px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             max-width: 400px;
             width: 100%;
+            position: relative;
+            top: -10%;
         }
 
-        h1 {
-            font-size: 24px;
+        .form-container h1 {
+            font-size: 27px;
             margin-bottom: 20px;
             color: #333333;
             text-align: center;
+            font-weight: 900;
+            position: relative;
+
         }
 
-        label {
+        .form-container label {
             display: block;
             font-size: 14px;
             margin-bottom: 8px;
             color: #555555;
         }
 
-        input[type="text"],
-        input[type="email"] {
+        .form-container input[type="text"],
+        .form-container input[type="email"] {
             width: calc(100% - 20px);
             padding: 10px;
             margin-bottom: 20px;
@@ -53,7 +67,7 @@
             font-size: 14px;
         }
 
-        button {
+        .form-container button {
             background-color: #28a745; /* Green button */
             color: #ffffff;
             border: none;
@@ -65,7 +79,7 @@
             transition: background-color 0.3s ease;
         }
 
-        button:hover {
+        .form-container button:hover {
             background-color: #218838; /* Darker green on hover */
         }
 
@@ -89,22 +103,105 @@
     </style>
 </head>
 <body>
-    <form id="ride-form" action="https://formspree.io/f/mnnaorbq" method="POST">
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name" required>
+    <div class="ie-panel"><a href="http://windows.microsoft.com/en-US/internet-explorer/"><img src="images/ie8-panel/warning_bar_0000_us.jpg" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today."></a></div>
+    <div class="preloader">
+      <div class="preloader-body">
+        <div class="cssload-container">
+          <div class="cssload-speeding-wheel"></div>
+        </div>
+        <p>Loading...</p>
+      </div>
+    </div>
+    <div class="page">
+      <header class="section page-header">
+        <!--RD Navbar-->
+        <div class="rd-navbar-wrap">
+          <nav class="rd-navbar rd-navbar-classic" data-layout="rd-navbar-fixed" data-sm-layout="rd-navbar-fixed" data-md-layout="rd-navbar-fixed" data-md-device-layout="rd-navbar-fixed" data-lg-layout="rd-navbar-static" data-lg-device-layout="rd-navbar-static" data-xl-layout="rd-navbar-static" data-xl-device-layout="rd-navbar-static" data-lg-stick-up-offset="46px" data-xl-stick-up-offset="46px" data-xxl-stick-up-offset="46px" data-lg-stick-up="true" data-xl-stick-up="true" data-xxl-stick-up="true">
+            <div class="rd-navbar-collapse-toggle rd-navbar-fixed-element-1" data-rd-navbar-toggle=".rd-navbar-collapse"><span></span></div>
+            <div class="rd-navbar-aside-outer rd-navbar-collapse">
+              <div class="rd-navbar-aside">
+                <ul class="list-inline list-inline-md">
+                  <li>
+                    <div class="unit unit-spacing-xs align-items-center">
+                      <div class="unit-left"><span class="icon text-middle mdi-phone-in-talk mdi"></span></div>
+                      <div class="unit-body"><a href="tel:#">1-800-1234-5671</a></div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="unit unit-spacing-xs align-items-center">
+                      <div class="unit-left"><span class="icon text-middle mdi-map-marker mdi"></span></div>
+                      <div class="unit-body"><a href="https://maps.app.goo.gl/r52c6ne3L24MGAKb7">221 Cathcart Street, Winnipeg, MB R3R 0S1</a></div>
+                    </div>
+                  </li>
+                </ul>
+                <ul class="social-list">
+                  <li><a href="live.html"><span class="icon fa fa-rss"></span></a></li>
+                  <li><a href="https://www.youtube.com/@rccgwordaglowparish"><span class="icon fa fa-youtube-play"></span></a></li>                  
+                  <li><a href="https://www.facebook.com/rccgwordaglowparish?mibextid=LQQJ4d"><span class="icon fa fa-facebook-f"></span></a></li>
+                  <li><a href="https://www.instagram.com/rccgwordaglowparish?igsh=MXdkZ3V6ZXpqZHhyZA==" target="_blank"><span class="icon fa fa-instagram"></span></a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="rd-navbar-main-outer">
+              <div class="rd-navbar-main">
+                <!--RD Navbar Panel-->
+                <div class="rd-navbar-panel">
+                  <!--RD Navbar Toggle-->
+                  <button class="rd-navbar-toggle" data-rd-navbar-toggle=".rd-navbar-nav-wrap"><span></span></button>
+                  <!--RD Navbar Brand-->
+                  <div class="rd-navbar-brand">
+                    <!--Brand--><a class="brand" href="index.html"><img class="brand-logo-dark" src="images/logo-default-189x54.png" alt="" width="94" height="27"/><img class="brand-logo-light" src="images/logo-default-189x54.png" alt="" width="94" height="27"/></a>
+                  </div>
+                </div>
+                <div class="rd-navbar-main-element">
+                  <div class="rd-navbar-nav-wrap">
+                    <ul class="rd-navbar-nav">
+                      <li class="rd-nav-item active"><a class="rd-nav-link" href="index.html">Home</a>
+                      </li>
+                      <li class="rd-nav-item"><a class="rd-nav-link" href="about-us.html">About Us</a>
+                      </li>
+                     <li class="rd-nav-item"><a class="rd-nav-link" href="ministries.html">Ministries</a>
+                      </li>
+                      <li class="rd-nav-item"><a class="rd-nav-link" href="events.html">Events</a>
+                        <ul class="rd-menu rd-navbar-dropdown">
+                          <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="single-event.html">Single Event</a>
+                          </li>
+                        </ul>
+                      </li>
+                      <li class="rd-nav-item"><a class="rd-nav-link" href="contacts.html">Contacts</a>
+                      </li>
 
-        <label for="phone">Phone:</label>
-        <input type="text" id="phone" name="phone" required>
 
-        <label for="address">Address:</label>
-        <input type="text" id="address" name="address" required>
+                      <li class="rd-nav-item"><a class="rd-nav-link" href="Request a Ride.html">Request a ride</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </nav>
+        </div>
+      </header>
+      <div class="form-container">
+        
+        <form id="ride-form" action="https://formspree.io/f/mnnaorbq" method="POST">
+            <h1>Request a Ride</h1>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
 
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required>
+            <label for="phone">Phone:</label>
+            <input type="text" id="phone" name="phone" required>
 
-        <button type="submit">Request a Ride</button>
-    </form>
+            <label for="address">Address:</label>
+            <input type="text" id="address" name="address" required>
 
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <button type="submit">Request a Ride</button>
+        </form>
+      </div>
+    </div>
     <script>
         document.getElementById('ride-form').addEventListener('submit', function(event) {
             event.preventDefault(); // Prevent default form submission
@@ -131,5 +228,8 @@
             });
         });
     </script>
+    <script src="js/live.js"></script>
+    <script src="js/core.min.js"></script>
+    <script src="js/script.js"></script>
 </body>
 </html>

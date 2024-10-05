@@ -45,7 +45,7 @@ checkLiveStatus();
 
 
  // Assuming you have a variable or API call that sets this
-var isLive = false; // Change this condition based on your live status
+var isLive = true; // Change this condition based on your live status
 
 window.onload = function() {
   if (isLive) {

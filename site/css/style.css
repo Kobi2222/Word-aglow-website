@@ -3377,7 +3377,7 @@ hr {
 
 .gallery-thumbnail {
 	display: block;
-	max-width: 390px;
+	max-width: 590px;
 	margin-right: auto;
 	margin-left: auto;
 	position: relative;
@@ -3405,14 +3405,13 @@ hr {
 
 }
 .gallery-thumbnail img {
-    filter: none; /* Removes any dark filter applied */
-    opacity: 1; /* Ensures the image is fully visible */
+    width: 100%; /* Set the width to 100% of the parent container */
+    height: 400px; /* Set a uniform height for all images */
+    object-fit: cover; /* Ensure the images cover the entire area, cropping if necessary */
+    border-radius: 5px; /* Optional: Add some border radius for a cleaner look */
 }
 
-.gallery-thumbnail:hover img {
-    filter: brightness(1); /* Prevent darkening on hover */
-    opacity: 1; /* Keep full opacity on hover */
-}
+
 
 
 @media (min-width: 992px) {
